@@ -7,9 +7,23 @@ import image3 from '../../assets/image3.png';
 
 const Background = ({ heroCount, playStatus }) => {
     if(playStatus) {
-        <video className='background' autoPlay loop muted>
-            <source src={video1} type='video/mp4' />
-        </video>
+        return (
+            <video className='background' autoPlay loop muted>
+                <source src={video1} type='video/mp4' />
+            </video>
+        );
+    } else if(heroCount === 0) {
+        return (
+            <img src={image1} alt="" className='background'/>
+        );
+    } else if(heroCount === 1) {
+        return (
+            <img src={image2} alt="" className='background'/>
+        );
+    } else if(heroCount === 2) {
+        return (
+            <img src={image3} alt="" className='background'/>
+        );
     }
 }
 
