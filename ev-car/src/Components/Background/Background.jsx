@@ -6,11 +6,11 @@ import image3 from '../../assets/image3.png';
 
 
 const Background = ({ heroCount, playStatus }) => {
-    return (
-        <div>
-            
-        </div>
-    );
+    if(playStatus) {
+        <video className='background' autoPlay loop muted>
+            <source src={video1} type='video/mp4' />
+        </video>
+    }
 }
 
 export default Background;

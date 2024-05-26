@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Background from '../Background/Background';
 import './Hero.css';
 
 const Hero = () => {
@@ -7,9 +9,12 @@ const Hero = () => {
         { text1: 'Give in to', text2: 'Everything'}
     ]
 
+    const [ heroCount, setHeroCount ] = useState(2);
+    const [ playStatus, setPlayStatus ] = useState(false);
+
     return (
         <div>
-
+            <Background playStatus={playStatus} heroCount={heroCount} />
         </div>
     )
 }
