@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 80px;
+    color: white;
+}
+
+.nav-logo {
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 15px;
+    gap: 50px;
+}
+
+.nav-contact {
+    border-radius: 50px;
+    padding: 10px 38px;
+    background: #fff;
+    color: #262626;
+}
