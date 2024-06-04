@@ -21,6 +21,10 @@ const Background = ({ heroCount, playVideo }) => {
         return (
             <img src={image2} className='background' alt="" />
         )
+    } else if(heroCount === 2) {
+        return (
+            <img src={image3} className='background' alt="" />
+        )
     }
 }
 
