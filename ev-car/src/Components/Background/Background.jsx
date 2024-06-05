@@ -5,12 +5,12 @@ import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
 import image3 from '../../assets/image3.png';
 
-const Background = ({ heroCount, playVideo }) => {
+const Background = ({ heroCount, playStatus }) => {
 
-    if(playVideo) {
+    if(playStatus) {
         return (
             <video className='background' autoPlay loop muted >
-                <source src={video1} type='video/mp3' />
+                <source src={video1} type='video/mp4' />
             </video>
         )
     } else if(heroCount === 0) {

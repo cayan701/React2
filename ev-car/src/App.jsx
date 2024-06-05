@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Background from "./Components/Background/Background";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
 
 const App = () => {
 
@@ -10,11 +12,19 @@ const App = () => {
   ];
 
   const [ heroCount, setHeroCount ] = useState(2);
-  const [ playVideo, setPlayVideo ] = useState(false);
+  const [ playStatus, setPlayStatus ] = useState(false);
 
   return (
     <div>
-      <Background heroCount={heroCount} playVideo={playVideo} />
+      <Background heroCount={heroCount} playStatus={playStatus} />
+      <Navbar />
+      <Hero 
+        setPlayStatus={setPlayStatus}
+        setHeroCount={setHeroCount}
+        heroData={heroData[heroCount]}
+        heroCount={heroCount}
+        playVideo
+      />
     </div>
   );
 }
